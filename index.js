@@ -247,7 +247,7 @@ function removeArtist(id, artsits) {
     return artists;
   }
 
-  // console.log(removeArtist(0));
+  console.log(removeArtist(0));
   
   /**
 
@@ -294,29 +294,26 @@ bio: Add 1-2 sentences (or use lorem ipsum) "*/
 function addArtist(artists, id, name, years, genre, nationality, bio){
 
     artist = {id:id, name:name, years:years, genre:genre, nationality:nationality, bio:bio,
-    
-      addArray:function(artsits) {
-        artists.push(this.artist)
-        return artists
-      }
-      
     }
 
-    return artists
+    return artists.push(artist)
     
 
   }
-console.log(addArtist(artists,1, "Jonathan Thornton", "1997 - Current Day", "Web Design", "American", "lorem ipsum"))
-  
+console.log(addArtist(artists, 21, "Jonathan Thornton", "1997 - Current Day", "Web Design", "American", "lorem ipsum"))
+
+console.log(artists);
 
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
+function checkArtist(artists, artistName){
+  return artists.some(artists => artists.name === artistName);;
 
   }
+
+
+  console.log(checkArtist(artists, "Hieronymus Bosch"));
 
 
 

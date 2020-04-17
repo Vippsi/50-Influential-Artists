@@ -86,6 +86,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+* {
+  box-sizing: border-box;
+}
 html body {
   font-size: 62.5%;
 }
@@ -106,6 +109,11 @@ header nav {
   justify-content: center;
   width: 100%;
 }
+@media (max-width: 500px) {
+  header nav {
+    margin: 2%;
+  }
+}
 header nav a {
   text-decoration: none;
   color: black;
@@ -113,6 +121,10 @@ header nav a {
 }
 header nav a:hover {
   font-weight: 600;
+}
+header nav div {
+  font-size: 2rem;
+  align-self: center;
 }
 .title-container .title {
   position: relative;
@@ -137,19 +149,55 @@ header nav a:hover {
   width: 70%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .title-container .title .text h1 {
+    font-size: 3rem;
+  }
+}
 .title-container .title .text .btn {
-  color: white;
-  font-size: 3rem;
+  color: black;
+  background-color: white;
+  padding: 1% 5%;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1.5rem;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .title-container .title .text .btn {
+    margin-top: 2%;
+    font-size: 1.1rem;
+  }
 }
 .title-container .title img {
   height: auto;
   width: 1000px;
 }
+.title-container .title img:hover {
+  opacity: 80%;
+}
+@media (max-width: 500px) {
+  .title-container .title img {
+    width: 400px;
+    padding-bottom: 5%;
+  }
+}
+hr {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
 .artists-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .artists-container .artist {
   display: flex;
@@ -157,16 +205,52 @@ header nav a:hover {
   justify-content: center;
   align-items: center;
   width: 50%;
-  border: 1px solid red;
   text-align: center;
+  align-self: stretch;
+}
+@media (max-width: 500px) {
+  .artists-container .artist {
+    width: 100%;
+  }
 }
 .artists-container .artist img {
-  height: auto;
+  height: 500px;
   width: 500px;
+  margin-bottom: 5%;
+  border-radius: 5px ;
+}
+.artists-container .artist img:hover {
+  opacity: 80%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist img {
+    margin-top: 2%;
+    width: 300px;
+    height: 300px;
+  }
 }
 .artists-container .artist a {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 2%;
+  color: black;
+  text-decoration: none;
+}
+.artists-container .artist a:hover {
+  font-weight: 600;
 }
 .artists-container .artist .bio {
-  font-size: 1rem;
+  font-size: 1.4rem;
+  width: 75%;
+  padding-top: 2%;
+  margin-bottom: 10%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist .bio {
+    width: 95%;
+    font-size: 1.2rem;
+    padding-bottom: 5%;
+  }
+}
+.artists-container .artist2 {
+  justify-content: stretch;
 }

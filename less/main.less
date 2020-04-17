@@ -5,6 +5,8 @@
         position: relative;
         .flexCenterRow();
         
+        
+        
         .pic {
             display: flex;
             justify-content: center;
@@ -14,18 +16,30 @@
         .text {
             .flexCenterColumn();
             position: absolute;
+           
 
             h1 {
                 color: white;
                 font-size: 5rem;
                 width: 70%;
                 text-align: center;
+
+                @media @mobile {
+                    font-size: 3rem;
+                }
             }
 
             .btn {
-                color: white;
-                font-size: 3rem;
+                .buttonStyle(black, white, 1% 5%);
+                border: 1px solid black;
+                border-radius: 5px;
+                font-size: 1.5rem;
                 text-align: center;
+
+                @media @mobile {
+                    margin-top: 2%;
+                    font-size: 1.1rem;
+                }
             }
             
         }
@@ -35,34 +49,89 @@
         img {
             height: auto;
             width: 1000px;
+            
+            &:hover {
+                opacity: 80%;
+            }
+
+            @media @mobile {
+                width: 400px;
+                padding-bottom: 5%;
+            }
+        }
         }
     }
+hr{
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .artists-container {
     .flexCenterRow();
 
+    @media @mobile {
+        .flexCenterColumn();
+    }
+    
+
     .artist {
         .flexCenterColumn();
+
         width: 50%;
-        border: 1px solid red;
+        // border: 1px solid red;
         text-align: center;
+        align-self: stretch;
+
+        @media @mobile {
+            width: 100%;
+        }
 
         img {
-            height: auto;
+            height: 500px;
             width: 500px;
+            margin-bottom: 5%;
+            border-radius: 5px ;
+
+            &:hover {
+                opacity: 80%;
+            }
+
+            @media @mobile {
+                margin-top: 2%;
+                width: 300px;
+                height: 300px;
+            }
         }
 
         a {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
+            margin-bottom: 2%;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: 600;
+            }
         }
 
         .bio {
-            font-size: 1rem;
+            font-size: 1.4rem;
             // height: 40vh;
+            width: 75%;
+            padding-top: 2%;
+            margin-bottom: 10%;
+
+            @media @mobile {
+                width: 95%;
+                font-size: 1.2rem;
+                padding-bottom: 5%;
+            }
         }
     }
 
-
+    .artist2 {
+        // padding-bottom: 11%;
+        justify-content: stretch;
+    }
 }
 
